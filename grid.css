@@ -1,0 +1,50 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-gap: 0.4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.2fr 1.2fr 0.8fr;
+    grid-template-areas: "nav nav nav nav" "sidebar main main main" "sidbar content1 content2 content3" "footer";
+}
+
+nav {
+    grid-area: nav;
+    background-color: blue;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+main {
+    grid-area: main;
+    background-color: blue;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background-color: #008cff;
+}
+
+#content1 {
+    grid-area: content1;
+    background-color: #7700ff;
+}
+
+#content2 {
+    grid-area: content2;
+    background-color: #8c00ff;
+}
+
+#content3 {
+    grid-area: content3;
+    background-color: #d400ff;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #00b7ff;
+}
